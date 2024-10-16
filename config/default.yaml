@@ -1,0 +1,13 @@
+title: Languages with a [YAMLScript Binding](https://yamlscript.org)
+
+langs:
+- Clojure: clj
+- Go: go
+- Java: java
+- JavaScript: js
+- Julia: jl
+- Perl: pl
+- Python: py
+- Raku: raku
+- Ruby: rb
+- Rust: rs

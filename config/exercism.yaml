@@ -1,0 +1,72 @@
+title: The [Exercism](http://exercism.org/tracks/) Languages
+
+langs:
+# 8 1/2: 8half
+- ABAP: abap
+- AWK: awk
+- Ballerina: ballerina
+### - Batch File: bat
+- C: c
+# C++: cpp
+- Clojure: clj
+- COBOL: cobol
+- CoffeeScript: coffee
+# Common Lisp: lisp
+- Crystal: cr
+- D: d
+- Dart: dart
+- Delphi: pas
+- Elixir: ex
+- Elm: elm
+# Emacs Lisp: l
+- Erlang: erl
+- Euphoria: ex
+- Fortran: f
+# F Sharp: fs
+- Gleam: gleam
+- Go: go
+- Groovy: groovy
+- Haskell: hs
+- Java: java
+- JavaScript: js
+- JCL: jcl
+- Jinja: jinja
+- Jq: jq
+- Julia: jl
+- Kotlin: kts
+- Lua: lua
+# MIPS Assembly: mips
+- Nim: nim
+# Objective-C: m
+- OCaml: ml
+- Perl: pl
+- PHP: php
+# PL/SQL: sql
+- PowerShell: psh
+- Prolog: pro
+### - Pure: pure
+- Pyret: arr
+- Python: py
+- R: r
+- Racket: rkt
+- Raku: raku
+### - Reason: re
+- Red: red
+- Roc: roc
+- Ruby: rb
+- Rust: rs
+- Scala: scala
+- Scheme: scm
+# Standard ML: ml
+- Swift: swift
+- Tcl: tcl
+- TypeScript: ts
+- Unison: u
+- V: v
+# Vim Script: vim
+# Visual Basic: vb
+- WebAssembly: wasm
+- Wren: wren
+# X86-64 Assembly: x86-64
+### - YAMLScript: ys
+- Zig: zig

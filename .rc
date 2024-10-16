@@ -1,0 +1,10 @@
+# shellcheck shell=bash
+
+YSRC_ROOT=$(cd "$(dirname "${BASH_SOURCE[0]:-$0}")" && pwd -P)
+
+[[ :$PATH: == *:"$YSRC_ROOT/bin":* ]] ||
+  PATH=$YSRC_ROOT/bin:$PATH
+
+export PATH
+
+# vim: ft=sh:
