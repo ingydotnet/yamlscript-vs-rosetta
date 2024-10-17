@@ -1,0 +1,50 @@
+title: All the *Script Languages
+
+langs:
+- ActionScript: as
+- AngelScript: angel
+- AppleScript: applescript
+- AssemblyScript: asmscript
+- CoffeeScript: coffee
+- Corescript: core
+- Cubescript: cube
+- DWScript: dw
+- FurryScript: furryscript
+- GDScript: gd
+- Global Script: global
+- Golfscript: golf
+- Hexiscript: hexi
+- JavaFX Script: javafx
+- JavaScript: js
+- JScript.NET: jscript
+- JudoScript: judo
+- Kamailio Script: kamailio
+- KonsolScript: konsol
+- LiveScript: live
+- Lotus 123 Macro Scripting: lotus123
+- LotusScript: lotus
+- MAXScript: max
+- MiniScript: mini
+- MIRC Scripting Language: mirc
+- MoonScript: moon
+- MyrtleScript: myrtle
+- NewtonScript: newton
+- PepsiScript: pepsi
+- PostScript: ps
+- ReScript: re
+- ScratchScript: scratch
+- Script3D: 3d
+- Script Basic: basic
+- ScriptBasic: basic
+- SkookumScript: skookum
+- TIScript: ti
+- ToffeeScript: toffee
+- TorqueScript: torque
+- TUSCRIPT: tu
+- TypeScript: ts
+- UScript: u
+- VBScript: vb
+- Vim Script: vim
+- X-script: x
+# - YAMLScript: ys
+- Zoomscript: zoom
