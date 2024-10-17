@@ -1,72 +1,77 @@
 title: The [Exercism](http://exercism.org/tracks/) Languages
 
 langs:
-# 8 1/2: 8half
+- 8th: 8th
 - ABAP: abap
 - AWK: awk
 - Ballerina: ballerina
-### - Batch File: bat
+### - Bash: bash
+- Batch-File: bat
 - C: c
-# C++: cpp
+- C++: cpp
+### - Cairo: cairo
+- ColdFusion: cfm     # aka CFML .cfc
 - Clojure: clj
 - COBOL: cobol
 - CoffeeScript: coffee
-# Common Lisp: lisp
+- Common-Lisp: lisp
+- C-sharp: cs
 - Crystal: cr
 - D: d
 - Dart: dart
 - Delphi: pas
 - Elixir: ex
 - Elm: elm
-# Emacs Lisp: l
+- Emacs-Lisp: l
 - Erlang: erl
 - Euphoria: ex
 - Fortran: f
-# F Sharp: fs
+- F-Sharp: fs
 - Gleam: gleam
 - Go: go
 - Groovy: groovy
 - Haskell: hs
 - Java: java
 - JavaScript: js
-- JCL: jcl
-- Jinja: jinja
 - Jq: jq
 - Julia: jl
 - Kotlin: kts
+- LFE: lfe
 - Lua: lua
-# MIPS Assembly: mips
+- MIPS-Assembly: mips
 - Nim: nim
-# Objective-C: m
+- Objective-C: m
 - OCaml: ml
 - Perl: pl
+- Smalltalk: st  # aka Pharo
 - PHP: php
-# PL/SQL: sql
+- PL-SQL: sql
 - PowerShell: psh
 - Prolog: pro
-### - Pure: pure
+### - PureScript: purs
 - Pyret: arr
 - Python: py
 - R: r
 - Racket: rkt
 - Raku: raku
-### - Reason: re
+- Reason: re
 - Red: red
 - Roc: roc
 - Ruby: rb
 - Rust: rs
 - Scala: scala
 - Scheme: scm
-# Standard ML: ml
+### - SQL: sql  # aka SQLite
+- Standard-ML: ml
 - Swift: swift
 - Tcl: tcl
 - TypeScript: ts
 - Unison: u
 - V: v
-# Vim Script: vim
-# Visual Basic: vb
+- Vim-Script: vim
+- Visual-Basic: vb
 - WebAssembly: wasm
 - Wren: wren
-# X86-64 Assembly: x86-64
+- X86-64-Assembly: x86-64
 ### - YAMLScript: ys
 - Zig: zig
