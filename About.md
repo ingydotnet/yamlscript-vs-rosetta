@@ -1,7 +1,7 @@
-### About the ys-rc Project
+### About the ys-vs-rc Project
 
 [YAMLScript](https://yamlscript.org) is a relatively new programming language
-and [this project](https://github.com/ingydotnet/ys-rc/) is intended to show
+and [this project](https://github.com/ingydotnet/ys-vs-rc/) is intended to show
 how things are done with it compared to some other programming languages.
 
 When comparing these programs, keep in mind that they were all written by

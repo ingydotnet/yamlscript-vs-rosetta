@@ -1,8 +1,7 @@
 default:
 
 clean:
-	$(RM) YS-RC-*.md
-
+	$(RM) ys-vs-rc-*.md
 
 realclean: clean
 	$(RM) -r RosettaCodeData
