@@ -3,6 +3,7 @@ title: The [Exercism](http://exercism.org/tracks/) Languages
 langs:
 - 8th: 8th
 - ABAP: abap
+- Arturo: arturo
 - AWK: awk
 - Ballerina: ballerina
 ### - Bash: bash
@@ -61,11 +62,12 @@ langs:
 - Rust: rs
 - Scala: scala
 - Scheme: scm
-### - SQL: sql  # aka SQLite
+- SQL: sql  # aka SQLite
 - Standard-ML: ml
 - Swift: swift
 - Tcl: tcl
 - TypeScript: ts
+- Uiua: .uiua
 - Unison: u
 - V: v
 - Vim-Script: vim

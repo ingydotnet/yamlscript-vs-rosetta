@@ -66,14 +66,32 @@ defn generate-markdown(conf):
 
   text =: file:slurp:chomp
 
-  yamlscript =: |+
+  yamlscript =:
+    if ENV.YSVSRC_CLOSED:
+      then: |
+        <details><summary>
+        <b>
+        <a href="https://rosettacode.org/wiki/$url-task#YAMLScript">YAMLScript</a>
+        </b>
+        ($(text:lines.#) lines)
+        </summary>
 
-    **[YAMLScript](https://rosettacode.org/wiki/$url-task#YAMLScript)**
-    ($(text:lines.#) lines)
+        ```yaml
+        $text
+        ```
 
-    ```yaml
-    $text
-    ```
+        </details>
+
+      else: |
+
+        **[YAMLScript](https://rosettacode.org/wiki/$url-task#YAMLScript)**
+        ($(text:lines.#) lines)
+
+        ```yaml
+        $text
+        ```
+
+  yamlscript +=: |+
 
     ----
 
@@ -92,10 +110,12 @@ defn generate-markdown(conf):
 
         file =:
           io/file("$(conf.rcdl)/$name/$task"):file-seq
-          .map(str).grep(qr("\\.${ext}$")).0
+          .map(str):sort.grep(qr("\\.${ext}$")).0
 
         if-not file:
-          warn: "Can't find '$name' solution file for '$task'"
+          then:
+            warn: "Can't find '$name' solution file for '$task'"
+            =>: markdown
           else:
             text =: file:slurp:chomp
             markdown +: |
@@ -124,20 +144,6 @@ defn generate-markdown(conf):
 
     </details>
 
-defn yamlscript-code(conf):
-  RCDT =: conf.rcdt
-  task =: conf.task
-  slug =: task:lc
-  path =: "$RCDT/$task/YAMLScript/$slug.ys"
-  path =:
-    if-not fs-f(path):
-      then: "$RCDT/$task/YAMLScript/${slug}-1.ys"
-      else: path
-
-  if fs-e(path):
-    slurp: path
-    else: 'No YAMLScript'
-
 defn about-task(conf):
   RCDT =: conf.rcdt
   task =: conf.task
@@ -155,44 +161,6 @@ defn about-task(conf):
 
       </details>
 
-
-defn format-programs(conf):
-  RCDT =: conf.rcdt
-  task =: conf.task
-
-  reduce _ '' conf.lang-list:
-    fn(markdown lang):
-      lang ext =: lang:first
-      slug =: task:lc
-      path =: "$RCDT/$task/$lang/$slug.ys"
-      path =:
-        if-not fs-f(path):
-          then: "$RCDT/$task/$lang/${slug}-1.ys"
-          else: path
-      if fs-e(path):
-        slurp: path
-        else: "No $lang"
-
-defn format-language-program(lang path):
-  name =: lang.name
-  text =: slurp(path)
-  lines =: text:lines.#
-  lang =: lang.slug
-  if ENV.OPEN:
-    then: |
-      #### $name ($lines)
-
-      ```$lang
-      $text
-      ```
-    else: |
-      <details><summary>$name ($lines)</summary>
-
-      ```$lang
-      $text
-      ```
-
-      </details>
 
 defn post-gist(markdown conf):
   api-url =: 'https://api.github.com/gists'
@@ -275,7 +243,7 @@ defn get-config(opts):
 
   config =: slurp(opts.config):yaml/load
   langs =: config.langs
-  lang-list =: langs.map(\(a(_):keys:first:S.subs(1):lc))
+  lang-list =: langs.map(\(_:keys:first:S.subs(1):lc))
   lang-dict =: langs.merge(*)
   lang-info =:
     reduce _ {} langs.map(\(a(_):keys:first)):
@@ -299,3 +267,4 @@ defn get-config(opts):
     markdown-file:: "ys-vs-rc-$(opts.task).md"
     self:: FILE.replace(qr(".*/"))
     url-task:: url-task
+
